@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App Avito</string>
+
+    <!-- Registration -->
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="button_register">Register</string>
+
+    <!-- Login -->
+    <string name="button_login">Login</string>
+
+    <!-- Product List -->
+    <string name="chip_all">All</string>
+    <string name="chip_electronics">Electronics</string>
+    <string name="chip_jewelery">Jewelery</string>
+    <string name="chip_men_clothing">Men\'s clothing</string>
+    <string name="chip_women_clothing">Women\'s clothing</string>
+    <string name="chip_no_sort">No sort</string>
+    <string name="chip_ascending">Ascending</string>
+    <string name="chip_descending">Descending</string>
+
+    <!-- Product Details -->
+    <string name="back_button_description">Back button</string>
+    <string name="product_image_description">Product image</string>
+
+    <!-- Errors -->
+    <string name="error_bad_request">Bad Request</string>
+    <string name="error_unauthorized">Unauthorized</string>
+    <string name="error_not_found">Not Found</string>
+    <string name="error_server_error">Server Error</string>
+    <string name="error_unknown">Unknown Error</string>
+    <string name="error_timeout">Timeout</string>
+    <string name="error_no_internet">No Internet Connection</string>
+</resources>

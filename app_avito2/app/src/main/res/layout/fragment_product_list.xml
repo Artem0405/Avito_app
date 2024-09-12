@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/categoryChipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/allChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/chip_all"
+                app:chipBackgroundColor="@color/chip_background"
+                app:checkedIconTint="@color/white"
+                app:textEndPadding="8dp"
+                app:textStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/electronicsChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chip_electronics"
+                app:chipBackgroundColor="@color/chip_background"
+                app:checkedIconTint="@color/white"
+                app:textEndPadding="8dp"
+                app:textStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/jeweleryChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chip_jewelery"
+                app:chipBackgroundColor="@color/chip_background"
+                app:checkedIconTint="@color/white"
+                app:textEndPadding="8dp"
+                app:textStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/menClothingChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chip_men_clothing"
+                app:chipBackgroundColor="@color/chip_background"
+                app:checkedIconTint="@color/white"
+                app:textEndPadding="8dp"
+                app:textStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/womenClothingChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chip_women_clothing"
+                app:chipBackgroundColor="@color/chip_background"
+                app:checkedIconTint="@color/white"
+                app:textEndPadding="8dp"
+                app:textStartPadding="8dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/sortChipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/noSortChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/chip_no_sort"
+                app:chipBackgroundColor="@color/chip_background"
+                app:checkedIconTint="@color/white"
+                app:textEndPadding="8dp"
+                app:textStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/ascendingChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chip_ascending"
+                app:chipBackgroundColor="@color/chip_background"
+                app:checkedIconTint="@color/white"
+                app:textEndPadding="8dp"
+                app:textStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/descendingChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chip_descending"
+                app:chipBackgroundColor="@color/chip_background"
+                app:checkedIconTint="@color/white"
+                app:textEndPadding="8dp"
+                app:textStartPadding="8dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
